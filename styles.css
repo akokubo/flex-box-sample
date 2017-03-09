@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+body {
+    font-size: 24px; /* フォントの大きさ */
+    font-family: Helvetica; /* フォントの種類 */
+    background-color: #999999; /* 背景色 */
+}
+
+#main {
+    min-height: 800px; /* 最小限の高さ */
+    margin: 0px; /* 外側の余白 */
+    padding: 0px; /* 内側の余白 */
+    display: flex; /* 表示方法(flexコンテナ) */
+    flex-direction: row; /* flexアイテムの配置方向 */
+}
+
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    border-width: : 1px; /* 枠線の太さ */
+    border-style: solid; /* 枠線の形状 */
+    border-color: #cccc33; /* 枠線の色 */
+    border-radius: 7pt; /* 枠線の角丸の半径 */
+    background: #dddd88; /* 背景(ショートハンド記述) */
+    flex-grow: 3; /* flexアイテムの幅が拡大する割合 */
+    flex-shrink: 1; /* flexアイテムが幅が縮む割合 */
+    flex-basis: 60%; /* flex アイテムの幅 */
+    order: 2; /* flexアイテムの配置順序 */
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb; /* 枠線(ショートハンド記法) */
+    border-radius: 7pt;
+    background: #ccccff;
+    flex: 3 6 20%; /* flexアイテム(ショートハンド記法) */
+    order: 1;
+}
+
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    flex: 1 6 20%;
+    order: 3;
+}
+
+header, footer {
+    display: block;
+    margin: 4px;
+    padding: 5px;
+    min-height: 100px;
+    border: 1px solid; #eebb55;
+    border-radius: 7pt;
+    background: #ffeebb;
+}

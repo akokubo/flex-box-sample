@@ -57,3 +57,21 @@ header, footer {
     border-radius: 7pt;
     background: #ffeebb;
 }
+
+/* 3 カラム表示には狭すぎる場合 */
+@media all and (max-width: 640px) {
+
+    #main, #page {
+        flex-direction: column;
+    }
+
+    #main > article, #main > nav, #main > aside {
+        /* ドキュメントの順番に戻す */
+        order: 0;
+    }
+
+    #main > nav, #main > aside, header, footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
+}
